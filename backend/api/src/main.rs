@@ -5,7 +5,6 @@ use api::util::app::App;
 async fn main() {
     let app = App::new();
 
-    app.execute(async |r| {
-    })
-    .await;
+    app.execute(async |r| r.route("/todo", todo_controller()))
+        .await;
 }
